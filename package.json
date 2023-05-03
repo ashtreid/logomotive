@@ -1,14 +1,15 @@
 {
   "name": "logomotive",
   "version": "1.0.0",
-  "description": "- app description - link to video - setup - usage instructions",
+  "description": "a command-line prompt interface that generates svg logos",
   "main": "index.js",
   "directories": {
     "example": "examples",
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
