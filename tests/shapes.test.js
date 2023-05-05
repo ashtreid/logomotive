@@ -51,21 +51,31 @@
 // });
 
 // Import child classes
-const { Triangle, Circle, Square } = require('./lib/shapes');
+const { Triangle, Circle, Square } = require('../lib/shapes');
+
+const keywordColors = ['blue', 'violet', 'pink', 'red', 'black', 'green', 'yellow'];
+const hexColors = ['#CCCCFF', '#E97451', '#B2BEB5', '#DFFF00', '#FFB6C1', '#D2042D', '#F9F6EE'];
+
+const randomKeyColors = Math.floor(Math.random() * keywordColors.length);
+console.log(randomKeyColors, months[keywordColors]);
+
+const randomHexColors = Math.floor(Math.random() * hexColors.length);
+console.log(randomHexColors, months[hexColors]);
 
 // Triangle tests
 describe('Triangle', () => {
-  const triangle = new Triangle('triangle', 'red');
+  const triangleKey = new Triangle('triangle', 'randomKeyColors');
 
-  test('has type property', () => {
-    expect(triangle.type).toBe('triangle');
+  test('renders a triangle SVG element with keyword color', () => {
+    expect(triangleKey.render()).toBe(
+      `<polygon points="150, 0 300, 200 0, 200" fill="red" />`
+      
+      );
   });
 
-  test('has color property', () => {
-    expect(triangle.color).toBe('red');
-  });
+  const triangleHex = new Triangle('triangle', 'randomHexColors');
 
-  test('renders a triangle SVG element', () => {
+  test('renders a triangle SVG element with hexidecimal color', () => {
     expect(triangle.render()).toBe('<polygon points="150, 0 300, 200 0, 200" fill="red" />');
   });
 });
