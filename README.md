@@ -12,4 +12,4 @@ In order to get chugging along on the simplest brand of your life, follow these 
 Watch the demo: [LogoMotive on Screencastify](https://watch.screencastify.com/v/NDOBS4DhcPeiQsxCnrMj)
 
 Here's a screenshot for a quick look:
-![LogoMotive screenshot](./assets/images/logomotive_uou.png)
+![LogoMotive screenshot](./Assets/images/logomotive_uou.png)
